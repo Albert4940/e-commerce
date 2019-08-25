@@ -1,0 +1,39 @@
+body
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+}
+
+#banniere{
+	
+	color: white;
+	background-image: url("../img/ban.jpg");
+
+	background-color: silver;
+	width: 100%;
+	height: 530px;
+}
+#section_index{
+	margin: 3%;
+display: flex;
+justify-content: space-around;
+}
+#section_index>div
+{
+	margin: 1%;
+}
+footer{
+	background-color: #74b9ff;
+	
+}
+#footer_content{
+	display: flex;
+}
+#footer_content>div
+{
+	margin: 1%;
+	text-align: center;
+}

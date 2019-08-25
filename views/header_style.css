@@ -1,0 +1,33 @@
+header
+{
+	
+	position: fixed;
+	display: inline-block;
+	padding: 10px;
+	width: 100%;
+	background-color: white;
+}
+
+ul
+{
+	position: relative;
+	list-style: none;
+	display: flex;
+
+	flex-direction: row;
+
+}
+ul>li
+{
+	position: relative;
+margin: 15px;
+}
+a
+{
+	color: black;
+	text-decoration: none;
+	
+}
+#logPart{
+	margin-top: 5px;
+}
