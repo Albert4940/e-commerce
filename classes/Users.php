@@ -1,5 +1,5 @@
 <?php
-	
+	require_once("../tools/connection.php");
 	class Users{
 		private $userName;
 		private $pass;		
@@ -96,7 +96,7 @@
 
 		public function addUser($userName, $pass, $nom, $prenom, $tel, $dateNaissance, $email, $adresse, $type){
 
-			 $link = mysqli_connect('localhost','root', '', 'market') or die(mysqli_error($link));
+			 $link =connection();
 
                  /*$insertion = "INSERT INTO coupons(code, valeur, date_validite, date_creation, etat, is_printed) VALUES ('" . $this->code . "', " . $this->valeur . ", '" . $this->date_validite . "', now(), '" . $this->etat . "', " . $this->is_printed . ")";*/
                  $insertion = "INSERT INTO user(userName, pass, nom, prenom, tel, dateNaissance, email, adresse, dateInscription, type) VALUES ('" . $userName . "', '" . $pass . "', '" . $nom . "', '" . $prenom . "', '" . $tel . "', '" . $dateNaissance . "', '" . $email . "','" . $adresse . "',now(),'" . $type . "')";

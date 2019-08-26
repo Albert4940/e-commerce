@@ -25,15 +25,3 @@ justify-content: space-around;
 {
 	margin: 1%;
 }
-footer{
-	background-color: #74b9ff;
-	
-}
-#footer_content{
-	display: flex;
-}
-#footer_content>div
-{
-	margin: 1%;
-	text-align: center;
-}

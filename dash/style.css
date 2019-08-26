@@ -1,0 +1,10 @@
+
+nav
+{
+	display: flex;
+	flex-direction: column;
+	padding:20px;
+	background-color: silver;
+	width: 200px;
+	margin-bottom: 20px;
+}

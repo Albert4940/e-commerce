@@ -1,0 +1,66 @@
+body
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+	background-color: silver;
+}
+
+td>input,select{
+	border: 0 solid black;
+	background-color: #dfe4ea;
+	margin: 5px;
+	 text-align: center;
+	height: 30px;
+	width: 100%;
+}
+table{
+	
+	width: 30%;
+}
+#formRegister
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#formRegister>table{
+	margin:2%;
+}
+
+#btn>input{
+	 padding-left: 3%;
+    padding-right: 3%;
+    height: 30px;
+  	
+    line-height: 20px;
+    text-align: center;
+     margin: 2%;
+    border: 0 solid black;
+    color: white;
+    font-weight: bold;
+	
+}
+#btn1{
+	background-color: #34495e;
+}
+#btn2{
+	background-color: #ff4757;
+}
+.btnUC
+{
+	display: flex;
+	justify-content: center;
+}
+
+#no{
+	margin-top: 5px;
+	 height: 5%;
+  	width: 29.3%; 
+     padding: 2px;
+     text-align: center;
+    border: 0 solid black;
+ 	background-color: #ff4757;
+}
