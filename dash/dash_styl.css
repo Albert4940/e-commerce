@@ -134,6 +134,7 @@ td>input,select{
 	height: 30px;
 	width: 100%;
 }
+
 table{
 	
 }
@@ -226,6 +227,7 @@ tr{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+
 }
 #fo>table{
 	width: 35%;
@@ -245,8 +247,48 @@ textarea{
 	justify-content: center;
 }
 
-/*Liste Client */
 
+/*Liste prod */
+
+#conteneur{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#element{
+
+}
+#listProduit{
+	width: 97%;
+	height: 80%;
+	border: 0 solid black;
+	
+	overflow: auto;
+	margin-bottom: 0px;
+}
+#listProduit>table{
+	border: 0 solid black;
+	background-color: #dfe4ea;
+	margin-left: 2px;
+
+	 text-align: center;
+	height: 30px;
+	width: 100%;
+}
+
+#head{
+	width: 97%;
+	
+	border: 0 solid black;
+}
+#head>table{
+	border: 0 solid black;
+	background-color: #dfe4ea;
+	margin-bottom:  -10px;
+	 text-align: center;
+	height: 30px;
+	width: 100%;
+}
 /*#divListCHead
 {
 	width: 840px;

@@ -1,5 +1,5 @@
 <?php
-	
+	require_once("../tools/connection.php");
 	class Produits{
 		private $code;
 		private $nom;
@@ -10,6 +10,7 @@
 		private $color;
 		private $dateAjout;
 		private $imgUrl;
+		
 
 		//Accessseurs
 		public function getCode(){
@@ -82,7 +83,7 @@
 		}
 
 		public function addProduit($idVendeur, $nom, $description, $prix, $qte, $size, $color, $imgUrl){
-			require_once("../tools/connection.php");
+			
 			$link=connection();
 			for($i = 0; $i < $qte; $i++){
                 $this->code = "PO-" . rand(100000, 999999);
@@ -91,7 +92,42 @@
                 $insertion = "INSERT INTO produit(idVendeur, code, nom, description, prix, qte, size, color, dateAjout, imgUrl) VALUES (" . $idVendeur . ", '" . $this->code . "', '" . $nom . "', '" . $description . "', '" . $prix . "', '" . $qte . "','" . $size . "','" . $color ."',now(),'" . $imgUrl . "')";
                 $execution = mysqli_query($link, $insertion) or die(mysqli_error($link));
             }
-
 		}
+
+		 public function listerProduitAch(){
+        	$link=connection();
+        	$req="SELECT * FROM produit;";
+        	 $execution = mysqli_query($link, $req) or die(mysqli_error($link));
+        	 while($data = mysqli_fetch_array($execution)){
+        	 	echo "<div><img src='../uploadsImg/$data[10]' width='50'/></div>";
+        	 }
+
+        }
+         public function listerProduit($idVendeur){
+        	$link=connection();
+        	$req="SELECT * FROM produit where idVendeur=$idVendeur;";
+        	 $execution = mysqli_query($link, $req) or die(mysqli_error($link));
+        	 
+        	 while($data = mysqli_fetch_array($execution)){
+        	 	echo "<tr style='background-color: #70a1ff;' ><td><img src='../uploadsImg/$data[10]'width='50'/></td><td>$data[3]</td><td>$data[4]</td><td>$data[5]</td><td>$data[6]</td><td>$data[7]</td><td>$data[8]</td><td>$data[9]</td></tr>";
+
+        	 }
+
+
+         }
+
+          public function nbreProduit($idVendeur){
+          	$link=connection();
+         	 $req="SELECT count(*) FROM produit where idVendeur=$idVendeur;";
+        	 $execution = mysqli_query($link, $req) or die(mysqli_error($link));
+        	 $dataQte;
+        	  while($data = mysqli_fetch_array($execution)){
+        	  	$dataQte=$data[0];
+        	  }
+        	  return $dataQte;
+
+        	 }
+
+        
 	}	
 ?>

@@ -1,12 +1,12 @@
 <?php 
-	require_once("verification.php");		
+		//session_start(); 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="dash_style.css">
-	<link rel="stylesheet" type="text/css" href="bar.css">
+	<link rel="stylesheet" type="text/css" href="dash_styl.css">
+	<link rel="stylesheet" type="text/css" href="ba.css">
 </head>
 <body>
 	<?php 
@@ -17,8 +17,8 @@
 	require_once("side.php");		
 ?>
 	<div id="corps">
-		<center><h1>LISTE ARTICLE</h1></center>
-		<div id="lister">
+		<center><h1>LISTE PRODUIT</h1></center>
+		<!-- <div id="lister"> 
 			<form method="POST">
 				<input type="search" name="recherche" placeholder="CODE/NOM/PRENOM" />
 				<select name="menu">
@@ -30,32 +30,38 @@
 		</select>
 				<input type="submit" name="rech" value="search" />
 			</form>			
-		</div>
+		</div>-->
 		
 				
-   <table border="1">  	
-   		<tr><td><strong>REFERENCE</strong></td><td><strong>Nom</strong></td><td><strong>DESCRIPTION</strong></td><td><strong>PRIX</strong></td></tr>
+   
+   		<!-- <div id="conteneur"> 
+   			<?php
+   				//require_once("../controlers/controler_prod.php");
+				//showProdAch();
+
+   			?>
+   		</div>-->
+   		<!-- <div id="head">  
+   			<table>
+   				<tr><td>IMG</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
+   			</table>
+   		</div>-->
+		<div id="listProduit">
+			<table >
+				<tr><td>IMG</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
+		   			<?php
+
+		   				require_once("../controlers/controler_prod.php");
+						showProd($_SESSION['idVend']);
+
+		   			?>
+		   			<tr><td>IMG</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
+		   		</table>
+		</div>
+   		
    		<?php
 	
-		$con=mysqli_connect('localhost',$_SESSION['userN'],$_SESSION['pass'],'projet');
-		if(!$con){
-		echo "Erreur : IMPOSSIBLE de se connecter a MYSQL.".PHP_EOL;
-		echo "Errno de debogage : ".mysqli_connect_errno().PHP_EOL;
-		echo "Erreur de debogage : ".mysqli_connect_error().PHP_EOL;				
-		exit;
-		$err="error";
-	}
-	
-	if(!isset($_POST['rech']) && !isset($_POST['menu']))
-	{
-		$reque="select * from articles";
-		$ex=$con->query($reque);
-			while ($req=mysqli_fetch_array($ex)) {
-		echo "<tr><td>$req[0]</td><td>$req[1]</td><td>$req[2]</td><td>$req[3]</td></tr><br/>";
-		}
-
-	}
-	
+		
 	/*if(isset($_POST['rech']))
 	{
 		$v_menu = $_POST['menu'];
@@ -109,7 +115,7 @@
 	
 ?>
     
-   </table>
+   
  
  
 	</div>

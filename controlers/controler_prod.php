@@ -1,5 +1,8 @@
 <?php
-	session_start();
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 	require_once("../classes/Produits.php");
 	if(isset($_POST['valider'])){
 		$imgUrl;
@@ -25,6 +28,21 @@
 		$prod = new Produits();
 		echo $imgUrl;
 		$prod->addProduit($_SESSION['idVend'],$_POST['nom'],$_POST['description'],$_POST['prix'],$_POST['qte'],$_POST['size'],$_POST['color'],$imgUrl);
+		header('location: ../dash/addProd.php');
 
+	}
+	function showProdAch(){
+		$pro = new Produits();
+		$pro->listerProduitAch();
+	}
+	function showProd($idVendeur){
+		$pro = new Produits();
+		$pro->listerProduit($idVendeur);
+	}
+
+	function qteProd($idVendeur){
+		$pro = new Produits();
+				
+		echo $pro->nbreProduit($idVendeur);
 	}
 ?>

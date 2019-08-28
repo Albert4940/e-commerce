@@ -61,9 +61,11 @@
 
 		<div id="nbArticle">
 			<div id="nbA">
-				<div>ARTICLES</div>
+				<div>PRODUITS</div>
 			<div><?php
 				//echo "".$_SESSION['article']."";
+				require_once("../controlers/controler_prod.php");
+						echo qteProd($_SESSION['idVend']);
 			?>
 			</div>
 			</div>

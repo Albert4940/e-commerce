@@ -6,7 +6,7 @@
 		<center><h3>INSERTION</h3></center>
 		<ul >	
 			<li><a href="addProd.php">Ajouter Produit</a></li>
-			<li><a href="article.php">ARTICLE</a></li>
+			<li><a href="listerProd.php">Lister Produit</a></li>
 			<li><a href="achat.php">ACHAT</a></li>
 		</ul>
 		
