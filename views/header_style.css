@@ -16,22 +16,37 @@
 	flex-direction: row;
 	justify-content: space-around;
 	width: 25%;
+	cursor:pointer;
 }
 #logbtn>a
 {
-	 padding: 1%;
+	 /* padding: 1%;
     padding-right: 2%;
     height: 20px;
   	background-color: #ff4757;
     line-height: 15px;
     text-align: center;
     width: 30%;
-     /*margin-right: 2%;*/
+    margin-right: 2%;
     border: 0 solid black;
     color: white;
     text-decoration: none;
     size: auto;
-    text-decoration: none;
+    ;*/
+    text-decoration: none
+}
+#home
+{
+	 padding-left: 6%;
+    padding-right: 6%;
+    height: 30px;
+  	
+    line-height: 20px;
+    text-align: center;
+     margin-right: 0%;
+    border: 0 solid black;
+    color: white;
+    width: 70px;
 }
 /*hiding label and checkbox*/
 input[type=checkbox],
@@ -92,7 +107,7 @@ body{
 }
 
 /*giving style for mobile*/
-#logout
+/*#logout*/
 {
 	 padding-left: 6%;
     padding-right: 6%;
@@ -116,7 +131,7 @@ body{
 }
 
 
-#login
+/*#login*/
 {
 	 padding-left: 6%;
     padding-right: 9.5%;

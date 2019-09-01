@@ -13,7 +13,7 @@ require_once("verification.php")
 </head>
 <body>
 	<?php require_once("header.php")?>
-	<br><br><br><br><br><br><br><section id="sectionPanier">
+	<br><br><br><br><section id="sectionPanier">
 
 		<div id="listProduit">
 			<table >
@@ -29,14 +29,14 @@ require_once("verification.php")
 		</div>
 		<br><br><br>
 		<center><h3>FINALISER LA VENTE</h3></center>
-		<form action="" method="post">
-        <center><table>
+		<br><br><form action="" method="post">
+        <center><table id="infocard">
              <tr style="width: 100%"><td>NUMERO CARTE DE CREDIT</td><td><input type="text" name="message" id="message" style="width: 100%" required /></td></tr>
        
 
        
     </table></center>
-     <center><input type="submit" value="Envoyer" name="achat" /></center>
+     <br><center><input type="submit" value="Envoyer" name="achat" id="btn" placeholder="3444-000-999" /></center>
     </form>
     <?php
     	if(isset($_POST['achat'])){

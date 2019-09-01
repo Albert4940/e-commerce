@@ -8,9 +8,9 @@
                     //echo'<li id"nb" style="margin-right:7%;size:7px;margin-top:15px;"></li>';
                 echo '<div id="logbtn">';
                     if(isset($_SESSION['user']))
-                        echo'<div > USER : '.$_SESSION['user'].' </div id="logout"><a href="logout.php">LOGOUT</a>';
+                        echo'<div id="login"> USER : '.$_SESSION['user'].' </div id="logout"><a href="logout.php"><input type="button" id="home" value="LOGOUT" style="background-color:  red;"/></a>';
                     else
-                        echo'<div id="login"><a href="login.php">LOGIN</a></div>';
+                        echo'<div id="login"><a href="login.php"><input type="button" id="home" value="LOGIN" style="background-color:  #2ed573;"/></a></div>';
                      echo "</div>";
                 ?>
             

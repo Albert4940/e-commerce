@@ -33,3 +33,30 @@ section{
 table{
 	width: 30%;
 }
+
+#btn
+{
+	
+	 padding-left: 3%;
+    padding-right: 6%;
+    height: 40px;
+  	
+    line-height: 20px;
+    text-align: center;
+     margin-right: 0%;
+    border: 0 solid black;
+    color: white;
+    width: 70px;
+    background-color:  #2ed573;
+}
+td>input,select{
+	border: 0 solid black;
+	background-color: #dfe4ea;
+	margin-bottom: 5px;
+	 text-align: center;
+	height: 30px;
+	width: 100%;
+}
+#infocard{
+	width: 40%;
+}
