@@ -49,7 +49,7 @@
 			<div id="nbClient">
 			<!-- <img src="customer2.png" id="" /> -->
 			<div id="nbC">
-				<div>CLIENTS</div>
+				<div>MESSAGES</div>
 			<div><?php
 				//echo "".$_SESSION['client']."";
 			?>

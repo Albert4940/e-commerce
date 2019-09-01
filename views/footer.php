@@ -14,4 +14,5 @@
 			<p>Worried about the safety of our store? Well, you shouldn't be! Your payment information won't be stored or stolen from our website. For more information, go check our Secure Payments page or send us a message on the Contact Us page.</p>
 		</div>
 		</div>
+		<center><h4>@ ALBERT-MARY DORCE 2019, All rights reserved</h4></center>
 	</footer>

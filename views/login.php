@@ -44,6 +44,7 @@ session_start();
 				$_SESSION['user']=$_POST['user'];
 				$_SESSION['pass']=$_POST['password'];
 				$_SESSION['type']=$_POST['type'];
+				
 				$_SESSION['idVend']=verification($_POST['user'],$_POST['password'],$_POST['type']);
 				echo $_POST['type'];
 				if ($_POST['type']=='vendeur') {
@@ -52,6 +53,7 @@ session_start();
 				}
 				else
 					header('location: index.php');
+				
 			}
 			
 			else{
@@ -62,6 +64,7 @@ session_start();
 			
 		}
 	?></center>
+	
 </section><br><br><br>
 <?php require_once("footer.php")?>
 </body>

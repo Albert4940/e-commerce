@@ -27,7 +27,7 @@
    	   		<table style="margin-right:3.5%;">
    	   			<tr><td> NOM</td><td><input type="text" name="nom"/></td></tr>
 			    <tr><td> PRIX</td><td><input type="text" name="prix"/></td></tr>
-			    <tr><td> QUANTITE</td><td><input type="text" name="qte"/></td></tr>
+			    <tr><td> QUANTITE</td><td><input type="number" name="qte"/></td></tr>
 			    <tr><td> DESCRIPTION</td><td><textarea name="description"></textarea></td></tr>
 
    	   		</table>
@@ -49,42 +49,7 @@
    </div>
   
  </form>
- <?php
- 
- 	if(isset($_POST['valider']))
-	{
-		$con=mysqli_connect('localhost',$_SESSION['userN'],$_SESSION['pass'],'projet');
-		if(!$con){
-		echo "Erreur : IMPOSSIBLE de se connecter a MYSQL.".PHP_EOL;
-		echo "Errno de debogage : ".mysqli_connect_errno().PHP_EOL;
-		echo "Erreur de debogage : ".mysqli_connect_error().PHP_EOL;				
-		exit;
-		$err="error";
-	}
 
-	$name =$_POST['nom'];
-	$pname = $_POST['prenom'];
-	$ad=$_POST['adresse'];
-	$code=$_POST['codePostal'];
-	$pays =$_POST['Pays'];
-	$tel=$_POST['telephone'];
-	$ville='';
-	$req="insert into clients values('','$name','$pname','$ad','$code','$ville','$pays','$tel')";
-	$ex=$con->query($req);
-	if($ex){
-	echo '<div id="ok">
-			<p>INSCRIPTION REUSSITE</p>
-		</div>';
-	}
-	else{
-	echo '<div id="no">
-			<p>INSCRIPTION REUSSITE</p>
-		</div>';
-	}
-	}
-	
-	
-?>
 	</div>
 	</section>
 	

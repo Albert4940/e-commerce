@@ -11,14 +11,14 @@ session_start();
 </head>
 <body>
 <?php require_once("header.php")?>
-<br><br><br><br><br><br><br><section id="section_register">
+<br><br><br><br><br><section id="section_register">
 	<center><h1>REGISTER</h1></center>
 	<center><form method="POST" action="">
 		<div id="formRegister">
 			<table>
-				<tr><td>Nom</td><td><input type="text" name="nom"></td></tr>
-				<tr><td>Prenom</td><td><input type="text" name="prenom"></td></tr>
-				<tr><td>Tel</td><td><input type="text" name="tel"></td></tr>
+				<tr><td>Nom</td><td><input type="text" name="nom" required></td></tr>
+				<tr><td>Prenom</td><td><input type="text" name="prenom" required></td></tr>
+				<tr><td>Tel</td><td><input type="text" name="tel" required></td></tr>
 				<tr><td>Date Naissance</td><td><input type="date" name="dateNaissance"></td></tr>
 				<tr><td>Type</td><td><select name="type">
 			<option value="vendeur">VENDEUR</option>
@@ -26,11 +26,11 @@ session_start();
 		</select></td></tr>
 			</table>
 			<table>
-				<tr><td>Email</td><td><input type="text" name="email"></td></tr>
-				<tr><td>Adresse</td><td><input type="text" name="adresse"></td></tr>
-				<tr><td>User Name</td><td><input type="text" name="user"></td></tr>
-				<tr><td>Password</td><td><input type="password" name="password"></td></tr>
-				<tr><td>Confirm Password</td><td><input type="password" name="confirmPassword"></td></tr>
+				<tr><td>Email</td><td><input type="text" name="email" required></td></tr>
+				<tr><td>Adresse</td><td><input type="text" name="adresse" required></td></tr>
+				<tr><td>User Name</td><td><input type="text" name="user" required></td></tr>
+				<tr><td>Password</td><td><input type="password" name="password" required></td></tr>
+				<tr><td>Confirm Password</td><td><input type="password" name="confirmPassword" required></td></tr>
 			</table>
 		</div>
 		<div id="btn" class="btnUC">

@@ -1,0 +1,24 @@
+1-mkdir tpdev
+2-echo formation linux>lin;echo interconnexion des reseaux>lin1
+3-mkdir auf1
+4-ln lin ln3
+5-ln -s lin1 lin5
+6-cat lin>ficbon;cat lin1>>ficbon
+7-chmod 6635 auf1
+8-chmod 5435 lin
+9-adduser bradley
+10-chown bradley lin1
+12-chgrp bradley ln3
+13-su bradley
+14- cp /etc/passwd > lin1
+15-
+16-sudo cp lin lin1 ln3 auf1
+17-chmod g+
+18-
+
+renommer 
+mv lin linc
+deplacer 
+mv linc fic
+rm ln3
+cp lin /home/user

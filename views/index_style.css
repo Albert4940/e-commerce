@@ -11,7 +11,7 @@ body
 	
 	color: white;
 	background-image: url("../img/ban.jpg");
-
+	background-size: cover;
 	background-color: silver;
 	width: 100%;
 	height: 530px;
@@ -25,3 +25,26 @@ justify-content: space-around;
 {
 	margin: 1%;
 }
+#img>img{
+	width:400px;
+}
+#missionh1,#missionp{
+font-size: 210%;
+}
+@media screen and (max-width:600px){
+
+#section_index{
+	/*margin: 3%;*/
+display: flex;
+flex-direction: column;
+}
+#section_index>div{
+	width: 100%;
+}
+#img>img{
+	width:100%;
+}
+#missionh1,#missionp{
+font-size: 100%;
+}
+	}

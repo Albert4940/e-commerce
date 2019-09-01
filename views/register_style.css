@@ -64,3 +64,16 @@ table{
     border: 0 solid black;
  	background-color: #ff4757;
 }
+@media screen and (max-width:600px){
+#formRegister
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+table{
+	width: 100%;
+	margin: 0;
+}
+
+}

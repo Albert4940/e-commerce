@@ -7,20 +7,7 @@
 		<ul >	
 			<li><a href="addProd.php">Ajouter Produit</a></li>
 			<li><a href="listerProd.php">Lister Produit</a></li>
-			<li><a href="achat.php">ACHAT</a></li>
-		</ul>
-		
-		<center><h3>CONSULTATION</h3></center>
-		<ul>
-			<li><a href="listerClient.php">CLIENT</a></li>
-			<li><a href="listerArticle.php">ARTICLE</a></li>
-			<li><a href="listerAchat.php">ACHAT</a></li>
-		</ul>
-		
-		<center><h3>MODIFICATION</h3></center>
-		<ul>
-			<li><a href="updateClient.php">CLIENT</a></li>
-			<li><a href="updateArticle.php">ARTICLE</a></li>
-			<li><a href="updateAchat.php">ACHAT</a></li>
+			<li><a href="updateProd.php">Modifier Produit</a></li>
+			<li><a href="../views/minichat.php">CHAT</a></li>
 		</ul>
 </nav>

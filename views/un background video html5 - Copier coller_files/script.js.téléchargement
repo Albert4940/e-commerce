@@ -1,0 +1,96 @@
+jQuery(document).ready(function(){
+            jQuery(window).scroll(function () {
+                if ( jQuery(this).scrollTop() > 400 )
+                    jQuery(".back-to-top").fadeIn();
+                else
+                    jQuery(".back-to-top").fadeOut();
+            });
+ 
+            jQuery(".back-to-top").click(function () {
+                jQuery("body,html").animate({ scrollTop: 0 }, 800 );
+                return false;
+            });
+       
+         });
+  
+jQuery(document).ready(function($){
+    /* Masonry + Infinite Scroll */	
+    var $container = $('#grid-container');
+    $container.imagesLoaded(function () {
+        $container.masonry({
+            itemSelector: '.post'
+        });
+    });
+	
+
+    $('#grid-container').masonry({
+        itemSelector: '.post',
+        columnWidth: 300,
+		gutter: 10
+    });
+    $container.infinitescroll({
+        navSelector: '#page-nav',
+        nextSelector: '#page-nav a',
+        itemSelector: '.post',
+        loading: {
+            msgText: 'Chargement des contenus...',
+            finishedMsg: 'Aucun contenu à charger.',
+            img: 'https://i.imgur.com/6RMhx.gif'
+        }
+    }, function (newElements) {
+        var $newElems = $(newElements).css({
+            opacity: 0
+        });
+        $newElems.imagesLoaded(function () {
+            $newElems.animate({
+                opacity: 1
+            });
+            $container.masonry('appended', $newElems, true);
+        });
+    });
+    $(window).unbind('.infscr');
+    jQuery("#page-nav a").click(function () {
+        jQuery('#grid-container').infinitescroll('retrieve');
+        return false;
+    });
+    $(document).ajaxError(function (e, xhr, opt) {
+        if (xhr.status == 404) $('#page-nav a').remove();
+    });    
+});
+
+
+
+
+jQuery(document).ready(function(){
+  jQuery(".close").css("display", "none");
+    var isMenuOpen = false;
+   jQuery('.icon-menu-button').click(function()
+    {
+        if (isMenuOpen === false)
+        {
+      
+           jQuery("#sidebar-wrapper").clearQueue().animate({
+                left : '250px'
+            },500);
+            jQuery(this).fadeOut(200);
+            jQuery(".close").fadeIn(300);
+             
+            isMenuOpen = true;
+        } 
+    });
+     
+  jQuery('.close').click(function()
+    {
+
+        if (isMenuOpen === true)
+        {
+           jQuery("#sidebar-wrapper").clearQueue().animate({
+                left : '0'
+            },500);         
+           jQuery('.close').fadeOut(200);
+            jQuery(".icon-menu-button").fadeIn(300);
+             
+            isMenuOpen = false;
+        }
+    });
+ })

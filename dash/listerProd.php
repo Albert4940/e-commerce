@@ -48,14 +48,14 @@
    		</div>-->
 		<div id="listProduit">
 			<table >
-				<tr><td>IMG</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
+				<tr><td>IMG</td><td>CODE</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
 		   			<?php
 
 		   				require_once("../controlers/controler_prod.php");
 						showProd($_SESSION['idVend']);
 
 		   			?>
-		   			<tr><td>IMG</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
+		   			<tr><td>IMG</td><td>CODE</td><td>NOM</td><td>DESCRIPTION</td><td>PRIX</td><td>QUANTITE</td><td>SIZE</td><td>COLOR</td><td>DATE D'AJOUT</td><td></td></tr>
 		   		</table>
 		</div>
    		
